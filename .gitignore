@@ -2,20 +2,13 @@
 bin
 gen
 lint.xml
-
-#Eclipse
-.project
-.classpath
-.settings
-.checkstyle
+.apt_generated/
 
 #IntelliJ IDEA
 .idea
 *.iml
-*.apk
 *.ipr
 *.iws
-classes
 gen-external-apklibs
 
 #Maven
@@ -28,7 +21,6 @@ build.xml
 ant.properties
 local.properties
 proguard.cfg
-proguard-project.txt
 
 #Gradle
 .gradle
@@ -36,17 +28,7 @@ build
 
 #Other
 .DS_Store
-tmp
 *.swp
 *.tmp
 *.bak
-*.swp
 *.launch
-
-#Crashlytics
-.crashlytics_data/
-com_crashlytics_export_strings.xml
-crashlytics-build.properties
-
-#Python
-*.pyc

@@ -88,8 +88,8 @@ dependencies {
     compile 'com.google.guava:guava:18.0'
 
     // RX Extensiosn
-    compile project(":rx-extensions")
-    compile project(":rx-android-extensions")
+    compile 'com.github.jacek-marchwicki.rx-java-extensions:rx-extensions:1.0.0'
+    compile 'com.github.jacek-marchwicki.rx-java-extensions:rx-android-extensions:1.0.0'
 
 }
 buildscript {

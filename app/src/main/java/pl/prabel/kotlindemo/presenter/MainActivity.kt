@@ -5,7 +5,7 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import dagger.Provides
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.startActivity
 import pl.prabel.kotlindemo.BaseActivity
 import pl.prabel.kotlindemo.MainApplication
 import pl.prabel.kotlindemo.R
@@ -13,6 +13,7 @@ import pl.prabel.kotlindemo.api.RepoModel
 import pl.prabel.kotlindemo.dagger.ActivityModule
 import pl.prabel.kotlindemo.dagger.ActivitySingleton
 import pl.prabel.kotlindemo.extensions.snackBar
+import pl.prabel.kotlindemo.presenter.repot_commits.RepoCommitsActivity
 import javax.inject.Inject
 
 class MainActivity : BaseActivity(){
@@ -40,7 +41,7 @@ class MainActivity : BaseActivity(){
     }
 
     fun clickAction(repoModel: RepoModel) {
-        snackBar("Click on item: ${repoModel.fullName}")
+        startActivity<RepoCommitsActivity>(RepoCommitsActivity.ExtrasKeys.repoItem to repoModel)
     }
 
     override fun inject(applicationComponent: MainApplication.MainApplicationComponent, activityModule: ActivityModule): BaseActivityComponent {

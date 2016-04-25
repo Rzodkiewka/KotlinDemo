@@ -15,6 +15,9 @@ interface ApiService {
     @GET("/repos/{user}/{repo}/issues")
     fun getIssuesForRepo(@Path("user") user: String, @Path("repo") repoName: String)
 
+    @GET("/repos/{user}/{repo}/commits")
+    fun getRepoCommits(@Path("user") user: String, @Path("repo") repoName: String) : Observable<List<CommitModel>>
+
     @GET("/repos/{user}/{repo}/issues/{issue}/comments")
     fun getCommenForIssue(@Path("user") user: String,
                           @Path("repo") repoName: String,
